@@ -30,7 +30,7 @@
       background-color: #ffffff;
     }
     .btn {
-      margin-top: 15px;
+      margin: 10px 5px;
       padding: 10px 20px;
       background-color: darkorange;
       color: white;
@@ -58,7 +58,7 @@
     </tr>
   </thead>
   <tbody id="tableBody">
-    <!-- Table rows will be added by JavaScript -->
+    <!-- Rows will be added by JavaScript -->
   </tbody>
 </table>
 
@@ -68,30 +68,47 @@
 </div>
 
 <script>
-  // Add 10 default rows or load saved ones
-  window.onload = function () {
+  function addRow(data = ["", "", "", "", ""]) {
+    const table = document.getElementById("tableBody");
+    const row = document.createElement("tr");
+    data.forEach(text => {
+      const cell = document.createElement("td");
+      cell.contentEditable = true;
+      cell.innerText = text;
+      row.appendChild(cell);
+    });
+    table.appendChild(row);
+  }
+
+  function loadCalendar() {
     const saved = JSON.parse(localStorage.getItem('calendarData')) || [];
     const tableBody = document.getElementById('tableBody');
 
+    tableBody.innerHTML = ''; // Clear existing
     if (saved.length > 0) {
-      saved.forEach(rowData => {
-        const row = document.createElement('tr');
-        rowData.forEach(cellText => {
-          const cell = document.createElement('td');
-          cell.contentEditable = true;
-          cell.innerText = cellText;
-          row.appendChild(cell);
-        });
-        tableBody.appendChild(row);
-      });
+      saved.forEach(rowData => addRow(rowData));
     } else {
       for (let i = 0; i < 10; i++) addRow();
     }
-  };
+  }
 
-  function addRow() {
-    const table = document.getElementById("tableBody");
-    const row = document.createElement("tr");
-    for (let i = 0; i < 5; i++) {
+  function saveCalendar() {
+    const table = document.getElementById("calendarTable");
+    const data = [];
+    for (let i = 1; i < table.rows.length; i++) {
+      const row = table.rows[i];
+      const rowData = [];
+      for (let j = 0; j < row.cells.length; j++) {
+        rowData.push(row.cells[j].innerText.trim());
+      }
+      data.push(rowData);
+    }
+    localStorage.setItem("calendarData", JSON.stringify(data));
+    alert("✅ Calendar saved successfully!");
+  }
 
+  window.onload = loadCalendar;
+</script>
 
+</body>
+</html>
