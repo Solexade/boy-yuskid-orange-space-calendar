@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Boy_yuskid's Orange Dynasty Space Calendar</title>
   <style>
     body {
@@ -13,48 +11,34 @@
     h1 {
       text-align: center;
       color: white;
-      font-size: 2em;
-    }
-    .table-container {
-      overflow-x: auto;
-      background-color: white;
-      padding: 10px;
-      border-radius: 10px;
     }
     table {
-      width: max-content;
-      min-width: 100%;
+      width: 100%;
       border-collapse: collapse;
+      background-color: #fff3e0;
     }
     th, td {
-      border: 2px solid orange;
+      border: 2px solid darkorange;
       padding: 10px;
       text-align: center;
-      min-width: 120px;
-      font-size: 0.85em;
     }
     th {
       background-color: darkorange;
       color: white;
     }
-    td {
-      background-color: #fff8e1;
-    }
     td[contenteditable="true"] {
-      background-color: #fff3e0;
+      background-color: #ffffff;
     }
-    .save-button {
-      display: block;
-      margin: 20px auto;
+    .btn {
+      margin-top: 15px;
       padding: 10px 20px;
-      font-size: 1em;
       background-color: darkorange;
       color: white;
       border: none;
+      border-radius: 5px;
       cursor: pointer;
-      border-radius: 10px;
     }
-    .save-button:hover {
+    .btn:hover {
       background-color: orangered;
     }
   </style>
@@ -63,105 +47,51 @@
 
 <h1>Boy_yuskid's Orange Dynasty Space Calendar</h1>
 
-<div class="table-container">
-  <table id="calendarTable">
-    <thead>
-      <tr>
-        <th>Day</th>
-        <th>Space 1</th><th>Time 1</th><th>Host 1</th>
-        <th>Space 2</th><th>Time 2</th><th>Host 2</th>
-        <th>Space 3</th><th>Time 3</th><th>Host 3</th>
-        <th>Space 4</th><th>Time 4</th><th>Host 4</th>
-        <th>Space 5</th><th>Time 5</th><th>Host 5</th>
-        <th>Space 6</th><th>Time 6</th><th>Host 6</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Monday</td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-      </tr>
-      <tr><td>Tuesday</td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-      </tr>
-      <tr><td>Wednesday</td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-      </tr>
-      <tr><td>Thursday</td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-      </tr>
-      <tr><td>Friday</td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-      </tr>
-      <tr><td>Saturday</td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-      </tr>
-      <tr><td>Sunday</td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-        <td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td>
-      </tr>
-    </tbody>
-  </table>
+<table id="calendarTable">
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Host</th>
+      <th>Time</th>
+      <th>Day</th>
+      <th>Re-occurring</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+    <!-- Table rows will be added by JavaScript -->
+  </tbody>
+</table>
+
+<div style="text-align:center;">
+  <button class="btn" onclick="addRow()">+ Add More</button>
+  <button class="btn" onclick="saveCalendar()">💾 Save</button>
 </div>
 
-<button class="save-button" onclick="saveCalendar()">Save Calendar</button>
-
 <script>
-  function saveCalendar() {
-    let table = document.getElementById("calendarTable");
-    let text = "";
+  // Add 10 default rows or load saved ones
+  window.onload = function () {
+    const saved = JSON.parse(localStorage.getItem('calendarData')) || [];
+    const tableBody = document.getElementById('tableBody');
 
-    for (let i = 0; i < table.rows.length; i++) {
-      let cells = table.rows[i].cells;
-      for (let j = 0; j < cells.length; j++) {
-        text += cells[j].innerText.trim() + (j < cells.length - 1 ? " | " : "");
-      }
-      text += "\n";
+    if (saved.length > 0) {
+      saved.forEach(rowData => {
+        const row = document.createElement('tr');
+        rowData.forEach(cellText => {
+          const cell = document.createElement('td');
+          cell.contentEditable = true;
+          cell.innerText = cellText;
+          row.appendChild(cell);
+        });
+        tableBody.appendChild(row);
+      });
+    } else {
+      for (let i = 0; i < 10; i++) addRow();
     }
+  };
 
-    let blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-    let link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "Boy_Yuskid_Orange_Dynasty_Calendar.txt";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-</script>
+  function addRow() {
+    const table = document.getElementById("tableBody");
+    const row = document.createElement("tr");
+    for (let i = 0; i < 5; i++) {
 
-</body>
-</html>
 
